@@ -22,5 +22,3 @@ for i in range(4):
           transposedRow.append(row[i])
      transposedMat.append(transposedRow)
 print('transposed mat: ', transposedMat)
-
-     
