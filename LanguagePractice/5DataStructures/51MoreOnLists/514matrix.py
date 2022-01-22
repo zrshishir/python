@@ -13,4 +13,14 @@ for i in range(4):
      transposed.append([row[i] for row in matrix])
      
 print(transposed)
+
+
+transposedMat = []
+for i in range(4):
+     transposedRow = []
+     for row in matrix:
+          transposedRow.append(row[i])
+     transposedMat.append(transposedRow)
+print('transposed mat: ', transposedMat)
+
      
