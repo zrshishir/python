@@ -7,3 +7,10 @@ matrix = [
 print('matrix: ',matrix)
 transpose = [[row[i] for row in matrix] for i in range(4)]
 print('transpose of the matrix: ', transpose)
+
+transposed = []
+for i in range(4):
+     transposed.append([row[i] for row in matrix])
+     
+print(transposed)
+     
