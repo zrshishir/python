@@ -6,3 +6,10 @@ print('Square Mmatrix: ',M1)
 # another way to declare
 M2 = [[j for j in range(4)] for i in range(3)]
 print('Matrix: ', M2)
+
+# using for loop to define two dimensional array
+M3 = []
+for i in range(2):
+    for j in range(2):
+        M3 = 0
+print(M3)
