@@ -30,3 +30,7 @@ Output:
 
     4
 
+#### Resource
+    http://www.spoj.com/problems/INTEST/
+
+#### Status: Accepted
