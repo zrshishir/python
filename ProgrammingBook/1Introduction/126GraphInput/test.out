@@ -1,0 +1,1 @@
+defaultdict(<class 'dict'>, {'paris': {'tokyo': 9471, 'new-york': 5545}, 'new-york': {'singapore': 15344}})
