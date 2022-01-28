@@ -34,3 +34,6 @@ Output:
 
     abho
     bhn
+
+Resource:
+    https://www.spoj.com/problems/CENCRY/
