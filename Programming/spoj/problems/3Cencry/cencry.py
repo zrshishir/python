@@ -1,25 +1,50 @@
+from gettext import find
 import sys
 
+vowel = 'aeiou'
+vowelLenth = len(vowel)
+consonant = 'bcdfghjklmnpqrstvwxyz'
+consLenth = len(consonant)
+
 def VowelPos(l):
-    return 'aeiou'.find(l)
+    return vowel.find(l)
+
 def ConsonantPos(l):
-    return 'bcdfghjklmnpqrstvwxyz'.find(l)
-def GetConsonant(i):
-    return 'bcdfghjklmnpqrstvwxyz'[i]
-def GetVowel(i):
-    return 'aeiou'[i]
-    
-    
+    return consonant.find(l)
 
-no_of_input = int(sys.stdin.readline())
-print(no_of_input)
+def GetConsonant(l, charPos, input):
+    charCount = CharCount(l, charPos, input)
+    if charCount == 1:
+        conPos = vowel.find(l)
+    else:
+        conPos = ((charCount - 1) * vowelLenth) % consLenth
+    return consonant[conPos]
 
-input = sys.stdin.readline()
-print(input)
-for l in input:
-    if VowelPos(l) >= 0:
-        print(GetConsonant(VowelPos(l)))
-    else: 
-        print(GetVowel(ConsonantPos(l)))
+def GetVowel(l, charPos, input):
+    charCount = CharCount(l, charPos, input)
+    if charCount == 1:
+        vowPos = consonant.find(l)
+        if vowPos >= vowelLenth:
+            vowPos = vowPos % vowelLenth
+    else:
+        vowPos = ((charCount - 1) * consLenth) % vowelLenth
+    return vowel[vowPos]
 
+def CharCount(l, charPos, input):
+    if charPos > len(input):
+        return input[:len(input)].count(l)
+    else:
+        return input[:charPos].count(l)
+        
+no_of_input = int(input())
+for _ in range(no_of_input):
+    inputText = input()
+    output = ''
+    for i in range(len(inputText)):
+        charPos = VowelPos(inputText[i])
+        if charPos >= 0:
+            output = output + GetConsonant(inputText[i], i+1, inputText)
+        else: 
+            output = output + GetVowel(inputText[i], i+1, inputText)
+    print(output)
     
