@@ -6,11 +6,6 @@ vowelLenth = len(vowel)
 consonant = 'bcdfghjklmnpqrstvwxyz'
 consLenth = len(consonant)
 
-def VowelPos(l):
-    return vowel.find(l)
-
-def ConsonantPos(l):
-    return consonant.find(l)
 
 def GetConsonant(l, charPos, input):
     charCount = CharCount(l, charPos, input)
@@ -41,8 +36,7 @@ for _ in range(no_of_input):
     inputText = input()
     output = ''
     for i in range(len(inputText)):
-        charPos = VowelPos(inputText[i])
-        if charPos >= 0:
+        if inputText[i] in vowel:
             output = output + GetConsonant(inputText[i], i+1, inputText)
         else: 
             output = output + GetVowel(inputText[i], i+1, inputText)
