@@ -1,4 +1,4 @@
-class OutQueue:
+class OurQueue:
     def _init_(self):
         self.in_stack = [] #tail
         self.out_stack = [] #head
