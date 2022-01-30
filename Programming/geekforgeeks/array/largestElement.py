@@ -8,6 +8,10 @@ def Largestnumber(arr):
     
     return element
 
-arr = [1, 8, 7, 56, 90]
+arr = [1, 8, 92, 56, 97]
 print(Largestnumber(arr))
+
+# Another one for largest number
+maxNo = max((arr[i]) for i, value in enumerate(arr))
+print(maxNo)
     
