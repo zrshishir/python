@@ -1,16 +1,36 @@
-import sys
+#User function Template for python3
+
+class Solution:
+    #Complete the below function
+    def search(self,arr, N, X):
+        #Your code here
+        if X in arr:
+            return arr.index(X)
+        else:
+            return -1
+
+#{ 
+#  Driver Code Starts
+#Initial Template for Python 3
 
 
-def search(arr, value):
-    if value in arr:
-        return arr.index(value)
-    else:
-        return -1
-    
-noOfInput = int(sys.stdin.readline())
+import math
 
-for i in range(0, noOfInput):
-    arraySize = int(sys.stdin.readline())
-    inputArray = list(map(int, sys.stdin.readline().split()))
-    searchedValue = int(sys.stdin.readline())
-    print(search(inputArray, searchedValue))
+def main():
+        T=int(input())
+        while(T>0):
+            
+            N=int(input())
+            
+            A=[int(x) for x in input().strip().split()]
+            
+            x=int(input())
+            ob=Solution()
+            print(ob.search(A,N,x))
+            
+            T-=1
+
+
+if __name__ == "__main__":
+    main()
+# } Driver Code Ends

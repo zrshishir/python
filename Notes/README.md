@@ -12,3 +12,6 @@ getting input and output together
 showing output after getting input and output
 
     python prog.py < test.in | tee test.out
+
+#### python course
+    https://practice.geeksforgeeks.org/batch/fork-python
