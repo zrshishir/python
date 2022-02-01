@@ -15,3 +15,7 @@ showing output after getting input and output
 
 #### python course
     https://practice.geeksforgeeks.org/batch/fork-python
+
+geeksforgeeks practice
+
+    https://practice.geeksforgeeks.org/tracks/fork-python/?batchId=119&tab=2
