@@ -18,4 +18,4 @@ def main():
         testcases -= 1
         
 if __name__ == '__main__':
-    main()     
+    main()
