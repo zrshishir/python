@@ -9,8 +9,8 @@ def fibonacci(n):
 
 # Driver Code
 def main():
+    
     testcases = int(input())
-    print(testcases)
     # Loop for testcases
     while(testcases > 0):
         nTerms = int(input())
