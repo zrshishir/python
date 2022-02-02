@@ -1,4 +1,3 @@
-
 def countTimes(n, a = 0):
     a += 1
     if n == 1:
@@ -8,21 +7,21 @@ def countTimes(n, a = 0):
     else:
         return countTimes(n / 2, a)
 
+def callingCountTimes(first, second, output = 0):
+    outputResult = 0
+    if second < first:
+        return output
+    outputResult = countTimes(second)
+    output = outputResult if outputResult >= output else output
+    return callingCountTimes(first, second - 1, output)
+
 def main():
     while True:
         try:
-            output = 0 
-            outputResult = 0
             first, second = map(int, input().split())
-            timer = second
         except EOFError:
             break
-        
-        while timer >= first:
-            output = countTimes(timer)
-            outputResult = output if output >= outputResult else outputResult
-            timer -= 1
-        print(first, second, outputResult)
+        print(first, second, callingCountTimes(first, second))
         
 if __name__ == '__main__':
     main()
