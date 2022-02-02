@@ -1,3 +1,7 @@
+from time import time
+from traceback import print_tb
+
+
 def countTimes(n, a = 0):
     a += 1
     if n == 1:
@@ -17,15 +21,15 @@ def main():
             output = 0 
             outputResult = 0
             first, second = map(int, input().split())
+            timer = second if second >= first else first
         except EOFError:
             break
-        print(first, second)
-        while (second <= first):
-            print(second, first)
-            
-            second -= 1
-            print(first, second, output)
         
+        while timer >= first:
+            output = countTimes(timer)
+            outputResult = output if output >= outputResult else outputResult
+            timer -= 1
+        print(first, second, outputResult)
         
 if __name__ == '__main__':
     main()
