@@ -1,7 +1,3 @@
-from time import time
-from traceback import print_tb
-
-
 def countTimes(n, a = 0):
     a += 1
     if n == 1:
@@ -11,17 +7,13 @@ def countTimes(n, a = 0):
     else:
         return countTimes(n / 2, a)
 
-#{ 
-#Driver Code Starts.
-
-# Driver Code
 def main():
     while True:
         try:
             output = 0 
             outputResult = 0
             first, second = map(int, input().split())
-            timer = second if second >= first else first
+            timer = second
         except EOFError:
             break
         
