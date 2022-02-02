@@ -1,17 +1,31 @@
-def print_fun(string, x):
-    print(string * x)
-    # Your code here
+def countTimes(n, a = 0):
+    a += 1
+    if n == 1:
+        return a
+    elif n % 2 != 0:
+        return countTimes(3 * n + 1, a)
+    else:
+        return countTimes(n / 2, a)
 
 #{ 
 #Driver Code Starts.
 
 # Driver Code
 def main():
-    testcases = int(input())
-    
-    # Loop for testcases
-    while(testcases > 0):
-        x1 = input()
-        x = int(input())
-        print_fun(string, x)
-       
+    while True:
+        try:
+            output = 0 
+            outputResult = 0
+            first, second = map(int, input().split())
+        except EOFError:
+            break
+        print(first, second)
+        while (second <= first):
+            print(second, first)
+            
+            second -= 1
+            print(first, second, output)
+        
+        
+if __name__ == '__main__':
+    main()

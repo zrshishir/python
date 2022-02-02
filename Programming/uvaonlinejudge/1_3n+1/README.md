@@ -1,4 +1,4 @@
 # Resources: 
-    https://practice.geeksforgeeks.org/problems/sep-and-end-in-print/1/?track=fork-python&batchId=119
+    https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=3&page=show_problem&problem=36
     
 #### Status: Accepted
