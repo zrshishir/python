@@ -14,7 +14,8 @@ def main():
             output = 0 
             outputResult = 0
             first, second = map(int, input().split())
-            timer = second
+            first = first if first < second else second
+            timer = second if second > first else first
         except EOFError:
             break
         
