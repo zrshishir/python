@@ -1,3 +1,5 @@
+import sys
+
 def countTimes(n, a = 0):
     a += 1
     if n == 1:
@@ -8,27 +10,29 @@ def countTimes(n, a = 0):
         return countTimes(n / 2, a)
 
 def callingCountTimes(first, second, output = 0):
-    
+    sys.setrecursionlimit(15000)
     if second < first:
         return output
-    
-    outputResult = countTimes(second)
-    output = output if output > outputResult else outputResult
-    
-    second -= 1
-    
-    return callingCountTimes(first, second, output)
+    else:
+        outputResult = countTimes(second)
+        output = output if output > outputResult else outputResult
+        second -= 1
+        
+        return callingCountTimes(first, second, output)
 
 def main():
+    
     while True:
         try:
             first, second = map(int, input().split())
-            if first > second:
-                first, second = second, first
+            
         except EOFError:
-            break
-        
-        print(first, second, callingCountTimes(first, second))
+            sys.exit(0)
+            
+        x, y = first, second
+        if first > second:
+            first, second = second, first
+        print(x, y, callingCountTimes(first, second))
         
 if __name__ == '__main__':
     main()

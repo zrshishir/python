@@ -1,4 +1,7 @@
 
+from threading import Timer
+
+
 def countTimes(n, a = 0):
     a += 1
     if n == 1:
@@ -14,8 +17,9 @@ def main():
             output = 0 
             outputResult = 0
             first, second = map(int, input().split())
-            first = first if first < second else second
-            timer = second if second > first else first
+            if first > second:
+                first, second = second, first
+            timer = second
         except EOFError:
             break
         
