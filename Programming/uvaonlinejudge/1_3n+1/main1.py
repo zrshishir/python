@@ -7,15 +7,14 @@ def countTimes(n, a = 0):
     elif n % 2 != 0:
         return countTimes(3 * n + 1, a)
     else:
-        return countTimes(n / 2, a)
+        return countTimes(n // 2, a)
 
 def callingCountTimes(first, second, output = 0):
     sys.setrecursionlimit(15000)
     if second < first:
         return output
     else:
-        outputResult = countTimes(second)
-        output = output if output > outputResult else outputResult
+        output = max(output, countTimes(second))
         second -= 1
         
         return callingCountTimes(first, second, output)
