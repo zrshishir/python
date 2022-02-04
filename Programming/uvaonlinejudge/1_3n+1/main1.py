@@ -1,13 +1,17 @@
 import sys
+import resource
+import time
 
-def countTimes(n, a = 0):
-    a += 1
-    if n == 1:
-        return a
-    elif n % 2 != 0:
-        return countTimes(3 * n + 1, a)
-    else:
-        return countTimes(n // 2, a)
+def countTimes(n):
+    count = 1
+    while n != 1:
+        count += 1
+        if n % 2 == 1:
+            n = 3 * n + 1
+        else:
+            n = n // 2
+
+    return count
 
 def callingCountTimes(first, second, output = 0):
     sys.setrecursionlimit(15000)
@@ -18,20 +22,22 @@ def callingCountTimes(first, second, output = 0):
         second -= 1
         
         return callingCountTimes(first, second, output)
-
+memory0 = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
+start_time = time.process_time()
 def main():
     
     while True:
         try:
-            first, second = map(int, input().split())
+            x, y = map(int, input().split())
             
         except EOFError:
+            memory1 = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
+            print('Memory usage: %s (kb)' % str(memory1 - memory0))
+            print('Execution time: ', time.process_time() - start_time)
             sys.exit(0)
             
-        x, y = first, second
-        if first > second:
-            first, second = second, first
-        print(x, y, callingCountTimes(first, second))
+        x, y = min(x, y), max(x, y)
+        print(x, y, callingCountTimes(x, y))
         
 if __name__ == '__main__':
     main()

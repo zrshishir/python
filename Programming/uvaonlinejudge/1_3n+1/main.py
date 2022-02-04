@@ -1,5 +1,6 @@
-
+import resource
 from threading import Timer
+import time
 
 
 def countTimes(n, a = 0):
@@ -11,7 +12,10 @@ def countTimes(n, a = 0):
     else:
         return countTimes(n / 2, a)
 
+memory0 = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
+start_time = time.process_time()
 def main():
+    
     while True:
         try:
             output = 0 
@@ -21,6 +25,9 @@ def main():
                 first, second = second, first
             timer = second
         except EOFError:
+            memory1 = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
+            print('Memory usage: %s (kb)' % str(memory1 - memory0))
+            print('Execution Time: ', time.process_time() - start_time)
             break
         
         while timer >= first:

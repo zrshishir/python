@@ -19,3 +19,6 @@ showing output after getting input and output
 geeksforgeeks practice
 
     https://practice.geeksforgeeks.org/tracks/fork-python/?batchId=119&tab=2
+
+### tricks for python
+    https://www.techbeamers.com/essential-python-tips-tricks-programmers/

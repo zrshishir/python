@@ -1,4 +1,6 @@
 import sys
+import resource
+import time
 
 def countTimes(n):
     count = 1
@@ -20,11 +22,14 @@ def callingCountTimes(first, second, output = 0):
         second -= 1
         
         return callingCountTimes(first, second, output)
-
+start_time = time.process_time()
+memory0 = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
 def Main():
     for line in sys.stdin:        
         first, second = map(int, line.split()[:2])
         print(first, second, callingCountTimes(first, second))
-    
+    memory1 = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
+    print('Memory usage: %s (kb)' % str(memory1 - memory0))
+    print('Execution time: ', time.process_time() - start_time)
 if __name__ == '__main__':
     Main()
