@@ -21,7 +21,6 @@ def main():
         
         testcase -= 1
         
-
 if __name__ == '__main__':
     main()
     
