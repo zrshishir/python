@@ -8,7 +8,7 @@ def inPutS():
 
 def main():
     testcases=int(input()) #testcases
-    while(testcases>0):
+    while(testcases > 0):
         inPutS() #the function that gets things done
         testcases-=1
         
