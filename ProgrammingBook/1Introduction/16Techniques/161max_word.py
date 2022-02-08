@@ -1,7 +1,6 @@
 from itertools import count
 
-
-def mostWords(L):
+def majority(L):
     count = {}
     for word in L:
         if word in count:
@@ -13,4 +12,4 @@ def mostWords(L):
 
 if __name__ == '__main__':
     L = 'shi shi su su su '
-    print(mostWords(L))
+    print(majority(L))
