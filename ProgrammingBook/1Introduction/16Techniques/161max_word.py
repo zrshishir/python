@@ -1,13 +1,13 @@
 from itertools import count
 
 def majority(L):
-    count = {}
+    listString = {}
     for word in L:
-        if word in count:
-            count[word] += 1
+        if word in listString:
+            listString[word] += 1
         else:
-            count[word] = 1
-    val_1st_max, arg_1st_max = max((count[word], word) for word in count)
+            listString[word] = 1
+    val_1st_max, arg_1st_max = max((listString[word], word) for word in listString)
     return val_1st_max, arg_1st_max
 
 if __name__ == '__main__':
