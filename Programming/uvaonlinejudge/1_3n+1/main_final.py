@@ -1,4 +1,5 @@
 from concurrent.futures import BrokenExecutor
+
 def countTimes(n):
     count = 1
     while n != 1:

@@ -1,7 +1,9 @@
 import resource
 from threading import Timer
 import time
+from functools import lru_cache
 
+@lru_cache(maxsize=5)
 
 def countTimes(n, a = 0):
     a += 1

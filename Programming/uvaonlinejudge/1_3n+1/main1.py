@@ -1,6 +1,9 @@
 import sys
 import resource
 import time
+from functools import lru_cache
+
+@lru_cache(maxsize=5)
 
 def countTimes(n):
     count = 1
