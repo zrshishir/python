@@ -6,12 +6,13 @@ from turtle import right
 class Solution:
     #Complete the below function
     def maxIntervalIntersect(S):
-        B = ([(left, +1) for left in S] + [(right, -1) for right in S])
+        B = ([(left, +1) for left, right in S] + [(right, -1) for left, right in S])
         B.sort()
-        print(B)
+        
         c = 0
         best = (c, None)
         for x, d in B:
+            print(x, d)
             c += d
             if best[0] < c:
                 best = (c, x)
@@ -24,7 +25,7 @@ class Solution:
 
 
 def main():
-        S = [2006, 2009]
+        S = [[2006, 2009], [2008, 2011], [2011, 2011], [2007, 2008], [2010, 2012]]
         print(Solution.maxIntervalIntersect(S))
         # T=int(input())
         # print(T)
