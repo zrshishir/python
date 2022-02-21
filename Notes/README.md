@@ -22,3 +22,6 @@ geeksforgeeks practice
 
 ### tricks for python
     https://www.techbeamers.com/essential-python-tips-tricks-programmers/
+
+#### calculation of time complexity is a big factor on computitive programming
+    https://algorithmtutor.com/Analysis-of-Algorithm/Running-Time-Growth-of-Function-and-Asymptotic-Notations/
