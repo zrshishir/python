@@ -27,11 +27,13 @@ class Solution:
 def main():
         T=int(input())
         print(T)
+        S = list()
         while(T>0):
             x, y = map(int, input().split())
-            print(Solution.maxIntervalIntersect({x, y}))
-            T-=1
-
+            S = S.push([x, y])
+            # print(Solution.maxIntervalIntersect({x, y}))
+            T -= 1
+        print(S)
 
 if __name__ == "__main__":
     main()
