@@ -1,3 +1,5 @@
+t9 = "22233344455566677778889999"
+# abcdefghijklmnopqrstuvwxyzmapping on the phone
 
 def T9Text(S):
     d = {}
@@ -13,7 +15,7 @@ def main():
         T = int(input())
         
         while(T > 0):
-            S = input()
+            S = int(input())
             # S = [x for x in input().strip().split()]
             T-=1
         print((S))
