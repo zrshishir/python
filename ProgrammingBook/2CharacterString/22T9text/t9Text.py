@@ -16,7 +16,7 @@ def main():
         
         while(T > 0):
             S = int(input())
-            # S = [x for x in input().strip().split()]
+            S = [x for x in input().strip().split()]
             T-=1
         print((S))
         
