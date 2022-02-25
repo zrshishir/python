@@ -1,12 +1,39 @@
+import code
+from multiprocessing.spawn import prepare
+from sys import prefix
+
+
 t9 = "22233344455566677778889999"
 # abcdefghijklmnopqrstuvwxyzmapping on the phone
 
-def letter_to_digit(l):
+def LetterToDigit(l):
     assert 'a' <= l <= 'z'
     return t9[ord(l) - ord('a')]
 
-def code_word(word):
-    return ''.join(map(letter_to_digit, word))
+def CodeWord(word):
+    return ''.join(map(LetterToDigit, word))
+
+def PredictiveWord(dict):
+    totalWeight = {}
+    for word, weight in dict:
+        prefix = ''
+        for x in word:
+            prefix += x
+            if prefix in totalWeight:
+                totalWeight[prefix] += weight
+            else:
+                totalWeight[prefix] = weight
+    prop = {}
+    for prefix in totalWeight:
+        code = CodeWord(prefix)
+        if code not in prop or totalWeight[prop[code]] < totalWeight[prefix]:
+            prop[code] = prefix
+    return prop
+
+def Propose(prop, seq):
+    if seq in prop:
+        prop[seq]
+    return None
 
 def T9Text(S):
     d = {}
