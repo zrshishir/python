@@ -46,13 +46,12 @@ def T9Text(S):
     return [d[s] for s in d if len(d[s]) > 1]
 
 def main():
-        # T = int(input())
-        
+        T = int(input())
+        print(T)
         # while(T > 0):
         #     S = int(input())
             # S = [x for x in input().strip().split()]
             # T-=1
-        print(letter_to_digit('b'))
         
 if __name__ == "__main__":
     main()
