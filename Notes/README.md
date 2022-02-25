@@ -25,3 +25,6 @@ geeksforgeeks practice
 
 #### calculation of time complexity is a big factor on computitive programming
     https://algorithmtutor.com/Analysis-of-Algorithm/Running-Time-Growth-of-Function-and-Asymptotic-Notations/
+
+#### string problem in python
+    https://www.geeksforgeeks.org/python-string-exercise/
