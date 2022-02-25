@@ -1,9 +1,12 @@
 t9 = "22233344455566677778889999"
 # abcdefghijklmnopqrstuvwxyzmapping on the phone
 
-def LetterToDigit(l):
+def letter_to_digit(l):
     assert 'a' <= l <= 'z'
     return t9[ord(l) - ord('a')]
+
+def code_word(word):
+    return ''.join(map(letter_to_digit, word))
 
 def T9Text(S):
     d = {}
@@ -22,7 +25,7 @@ def main():
         #     S = int(input())
             # S = [x for x in input().strip().split()]
             # T-=1
-        print(LetterToDigit('b'))
+        print(letter_to_digit('b'))
         
 if __name__ == "__main__":
     main()
