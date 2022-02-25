@@ -1,0 +1,1 @@
+## Resource: http://poj.org/problem?id=1451

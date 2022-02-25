@@ -11,6 +11,7 @@ def CodeWord(word):
 def PredictiveWord(dict):
     totalWeight = {}
     for word, weight in dict:
+        
         prefix = ''
         for x in word:
             prefix += x
@@ -27,26 +28,33 @@ def PredictiveWord(dict):
 
 def Propose(prop, seq):
     if seq in prop:
-        prop[seq]
-    return None
+        return prop[seq]
+    return ''
 
 def main():
         T = int(input())
-        print(T)
+        
         while(T > 0):
             wordInput = int(input())
-            dict = {}
-            while(wordInput > 0):
-                word, weight = map(str, input().split())
-                dict = word, int(weight)
+            d = []
+            while wordInput > 0:
+                word, weight = input().split()
+                d.append((word, int(weight)))
                 wordInput -= 1
-            print(dict)
-            prop = PredictiveWord(dict)
+            
+            prop = PredictiveWord(d)
+            
             keyInput = int(input())
             while keyInput > 0:
-                print(int(input()))
+                seq = 0
+                for n in input():
+                    seq = seq * 10 + int(n)
+                    res = Propose(prop, str(seq))
+                    if res != '':
+                        print(res)
+                    else:
+                        print("MANUALLY")
                 keyInput -= 1
-            # S = [x for x in input().strip().split()]
             T-=1
         
 if __name__ == "__main__":
