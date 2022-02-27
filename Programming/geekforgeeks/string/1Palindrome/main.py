@@ -1,7 +1,3 @@
-
-from re import S
-
-
 def Palindrome(s):
     return len(s)
 def main():
