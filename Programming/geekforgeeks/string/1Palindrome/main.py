@@ -20,9 +20,9 @@ def main():
         while(T > 0):
             S = input()
             if (Palindrome(S)):
-                print("Palindrome")
-            else:
                 print("This is not palindrome")
+            else:
+                print("This is palindrome")
             T -= 1
         
 if __name__ == "__main__":
