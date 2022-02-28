@@ -23,7 +23,7 @@ def main():
                 print("Palindrome")
             else:
                 print("This is not palindrome")
-            T-=1
+            T -= 1
         
 if __name__ == "__main__":
     main()
