@@ -4,14 +4,25 @@ def Palindrome(s):
     start = 0
     flag = 0
     
-    
-    return mid
+    while start <= mid:
+        if s[start] == s[last]:
+            start += 1
+            last -= 1
+        else:
+            flag = 1
+            break
+        
+    return flag
+
 def main():
         T = int(input())
         print(T)
         while(T > 0):
             S = input()
-            print(Palindrome(S))
+            if (Palindrome(S)):
+                print("Palindrome")
+            else:
+                print("This is not palindrome")
             T-=1
         
 if __name__ == "__main__":
