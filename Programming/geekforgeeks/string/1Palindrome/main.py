@@ -1,5 +1,11 @@
 def Palindrome(s):
-    return len(s)
+    last = len(s) - 1
+    mid = last // 2
+    start = 0
+    flag = 0
+    
+    
+    return mid
 def main():
         T = int(input())
         print(T)
