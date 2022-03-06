@@ -12,6 +12,15 @@ def Symmetry(s):
         mid = n // 2
     start1 = 0
     start2 = mid
+    
+    while (start1 < mid and start2 < n):
+        if (s[start1] == s[start2]):
+            start1 = start1 + 1
+            start2 = start2 + 1
+        else:
+            flag = 1
+            break
+    return flag
 
 def main():
         T = int(input())
