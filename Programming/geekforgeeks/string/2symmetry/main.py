@@ -1,28 +1,27 @@
-def Palindrome(s):
-    last = len(s) - 1
-    mid = last // 2
-    start = 0
+from tracemalloc import start
+
+
+def Symmetry(s):
+    n = len(s)
+   
     flag = 0
     
-    while start <= mid:
-        if s[start] == s[last]:
-            start += 1
-            last -= 1
-        else:
-            flag = 1
-            break
-        
-    return flag
+    if n %  2:
+        mid = n // 2 + 1
+    else:
+        mid = n // 2
+    start1 = 0
+    start2 = mid
 
 def main():
         T = int(input())
         print(T)
         while(T > 0):
             S = input()
-            if (Palindrome(S)):
-                print("This is not palindrome")
+            if (Symmetry(S)):
+                print("This is not Symmetry")
             else:
-                print("This is palindrome")
+                print("This is Symmetry")
             T -= 1
         
 if __name__ == "__main__":
