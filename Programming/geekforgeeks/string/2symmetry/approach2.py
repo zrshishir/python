@@ -1,4 +1,4 @@
-def Palindrome(s):
+def Symmetry(s):
    half = int(len(s) / 2)
    first_string = s[:half]
    
@@ -6,11 +6,11 @@ def Palindrome(s):
        second_string = s[half:]
    else:
        second_string = s[half+1:]
-   
-   if first_string == second_string[::-1]:
-       return True
+       
+   if first_string == second_string[::-1]:  # ''.join(reversed(second_str)) [slower]
+        return True
    else:
-       return False
+        return False
        
 
 def main():
@@ -19,10 +19,10 @@ def main():
         while(T > 0):
             S = input()
             
-            if (Palindrome(S)):
-                print("This is palindrome")
+            if (Symmetry(S)):
+                print("This is Symmetry")
             else:
-                print("This is not palindrome")
+                print("This is not Symmetry")
             T -= 1
         
 if __name__ == "__main__":
