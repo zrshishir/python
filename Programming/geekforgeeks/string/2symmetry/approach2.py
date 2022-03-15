@@ -12,7 +12,6 @@ def Symmetry(s):
    else:
         return False
        
-
 def main():
         T = int(input())
         print(T)
