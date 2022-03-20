@@ -17,7 +17,9 @@ class Solution:
 import math
 
 def main():
+    
         T=int(input())
+        
         while(T>0):
             
             N=int(input())
