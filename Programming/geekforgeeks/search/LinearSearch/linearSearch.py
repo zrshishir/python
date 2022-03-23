@@ -18,19 +18,19 @@ import math
 
 def main():
     
-        T = int(input())
+    T = int(input())
+    
+    while( T > 0 ):
         
-        while( T > 0 ):
-            
-            N = int(input())
-            
-            A = [int(x) for x in input().strip().split()]
-            
-            x = int(input())
-            ob = Solution()
-            print(ob.search(A,N,x))
-            
-            T -= 1
+        N = int(input())
+        
+        A = [int(x) for x in input().strip().split()]
+        
+        x = int(input())
+        ob = Solution()
+        print(ob.search(A,N,x))
+        
+        T -= 1
 
 
 if __name__ == "__main__":
