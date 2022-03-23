@@ -1,12 +1,14 @@
 def Reverse(s):
-    return flag
+    words = s.split(' ')
+    reversedString = ' '.join(reversed(words))
+    return reversedString
 
 def main():
         T = int(input())
-        print(T)
+        
         while(T > 0):
             S = input()
-            print(S)
+            print(Reverse(S))
             T -= 1
         
 if __name__ == "__main__":
