@@ -1,15 +1,15 @@
 def IsPalindrome(s):
     
-        
-    return 
+    return s
 
 def main():
     T = int(input())
     print(T)
     while(T > 0):
-        S = input()
-        lowerRange, upperRange = S.split(' ')
-        
+        lowerRange, upperRange = map(int, input().split())
+        while lowerRange <= upperRange:
+            print(IsPalindrome(lowerRange))
+            lowerRange += 1
         T -= 1
         
 if __name__ == "__main__":
