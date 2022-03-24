@@ -2,9 +2,11 @@ from unittest import result
 
 
 def IsPalindrome(number):
+    return 10 ** 0
     storeNo = number
+    result = 0
     while number / 10 > 0:
-        result = (number % 10)  + 
+        result = result + (number % 10)
     return 13 / 10
 
 def main():
