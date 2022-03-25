@@ -1,12 +1,12 @@
 def IsPalindrome(number):
     storeNo = number
-    result = 0
+    rev = 0
     i = 0
     while number > 0:
-        result = result * 10 + (number % 10)
+        rev = rev * 10 + (number % 10)
         number = int(number / 10)
         i += 1
-    return result == storeNo
+    return rev == storeNo
 
 
 def main():
