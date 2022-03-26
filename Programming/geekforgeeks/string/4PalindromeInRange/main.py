@@ -8,7 +8,6 @@ def IsPalindrome(number):
         i += 1
     return rev == storeNo
 
-
 def main():
     T = int(input())
     
