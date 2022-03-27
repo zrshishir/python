@@ -28,3 +28,7 @@ geeksforgeeks practice
 
 #### string problem in python
     https://www.geeksforgeeks.org/python-string-exercise/
+
+#### laravel inertia vue 3 crud
+    https://webmobtuts.com/backend-development/laravel-8-crud-using-inertiajs-and-vuejs-3/
+    https://www.itsolutionstuff.com/post/laravel-8-inertia-js-crud-with-jetstream-tailwind-cssexample.html
