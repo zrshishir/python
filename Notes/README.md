@@ -31,6 +31,9 @@ geeksforgeeks practice
 
 #### laravel inertia vue 3 crud
     https://webmobtuts.com/backend-development/laravel-8-crud-using-inertiajs-and-vuejs-3/
+
     https://www.itsolutionstuff.com/post/laravel-8-inertia-js-crud-with-jetstream-tailwind-cssexample.html
+
     https://www.itsolutionstuff.com/post/how-to-create-url-shortener-using-laravelexample.html
+    
     https://blog.pusher.com/tests-laravel-applications/
