@@ -1,5 +1,5 @@
 # Resources: 
-    https://practice.geeksforgeeks.org/problems/is-and-in-operator/1/?track=fork-python&batchId=119
+    https://www.geeksforgeeks.org/program-check-input-integer-string/?ref=lbp
     
-#### Status: Accepted
+#### Status: 
     
