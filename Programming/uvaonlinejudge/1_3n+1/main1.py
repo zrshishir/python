@@ -27,6 +27,7 @@ def callingCountTimes(first, second, output = 0):
         return callingCountTimes(first, second, output)
 memory0 = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
 start_time = time.process_time()
+
 def main():
     
     while True:

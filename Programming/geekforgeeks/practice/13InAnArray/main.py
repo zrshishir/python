@@ -25,7 +25,7 @@ def main():
                 print("True")
             else:
                 print("False")
-        testcases-=1
+        testcases -= 1
 
 if __name__ == '__main__' :
     main()

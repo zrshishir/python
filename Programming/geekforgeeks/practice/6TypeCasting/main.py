@@ -14,12 +14,10 @@ def inPut():
 #Driver Code Starts.
 
 def main():
-    testcases=int(input()) #testcases
-    while(testcases>0):
+    testcases = int(input()) #testcases
+    while( testcases > 0 ):
         inPut() #the function that gets things done
-        testcases-=1
-        
-
+        testcases -= 1
 
 if __name__=='__main__':
     main()
